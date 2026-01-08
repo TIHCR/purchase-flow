@@ -33,7 +33,7 @@ const SignatureModal = ({ isOpen, onClose, onConfirm }: SignatureModalProps) => 
 
   const handleConfirm = () => {
     if (sigRef.current && !sigRef.current.isEmpty()) {
-      const signatureData = sigRef.current.getTrimmedCanvas().toDataURL('image/png');
+      const signatureData = sigRef.current.getCanvas().toDataURL('image/png');
       onConfirm(signatureData);
       onClose();
     }

@@ -68,7 +68,7 @@ const SolicitarCompra = () => {
   });
 
   const onSubmit = (data: FormData) => {
-    addRequest(data);
+    addRequest(data as Omit<import('@/store/purchaseStore').PurchaseRequest, 'id' | 'status' | 'createdAt'>);
     toast({
       title: 'Solicitação enviada!',
       description: 'Sua solicitação foi registrada e está aguardando aprovação.',

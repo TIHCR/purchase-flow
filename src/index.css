@@ -2,6 +2,48 @@
 @tailwind components;
 @tailwind utilities;
 
+/* PDF Mode - solid colors for html2canvas */
+.pdf-mode {
+  background-color: #ffffff !important;
+}
+
+.pdf-mode * {
+  color: #1a1a1a !important;
+}
+
+.pdf-mode .text-muted-foreground {
+  color: #6b7280 !important;
+}
+
+.pdf-mode .text-primary {
+  color: #1e40af !important;
+}
+
+.pdf-mode .text-success {
+  color: #059669 !important;
+}
+
+.pdf-mode .bg-secondary {
+  background-color: #f3f4f6 !important;
+}
+
+.pdf-mode .bg-primary {
+  background-color: #1e40af !important;
+}
+
+.pdf-mode .text-primary-foreground {
+  color: #ffffff !important;
+}
+
+.pdf-mode .border-border {
+  border-color: #e5e7eb !important;
+}
+
+.print-document {
+  background-color: #ffffff;
+}
+
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 @layer base {

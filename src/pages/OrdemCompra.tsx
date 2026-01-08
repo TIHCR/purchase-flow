@@ -73,11 +73,18 @@ const OrdemCompra = () => {
     setIsGeneratingPdf(true);
 
     try {
+      // Temporarily add class for PDF generation with solid colors
+      documentRef.current.classList.add('pdf-mode');
+      
       const canvas = await html2canvas(documentRef.current, {
         scale: 2,
         useCORS: true,
         backgroundColor: '#ffffff',
+        logging: false,
       });
+      
+      // Remove class after capture
+      documentRef.current.classList.remove('pdf-mode');
 
       const imgData = canvas.toDataURL('image/png');
       const pdf = new jsPDF('p', 'mm', 'a4');
@@ -144,7 +151,7 @@ const OrdemCompra = () => {
       {/* Document */}
       <div 
         ref={documentRef}
-        className="bg-card rounded-xl shadow-lg border border-border p-8 animate-slide-up"
+        className="bg-white rounded-xl shadow-lg border border-border p-8 animate-slide-up print-document"
       >
         {/* Header */}
         <div className="document-header text-center">

@@ -76,11 +76,16 @@ const OrdemCompra = () => {
       // Temporarily add class for PDF generation with solid colors
       documentRef.current.classList.add('pdf-mode');
       
+      // Force reflow to apply styles
+      void documentRef.current.offsetHeight;
+      
       const canvas = await html2canvas(documentRef.current, {
-        scale: 2,
+        scale: 3,
         useCORS: true,
         backgroundColor: '#ffffff',
         logging: false,
+        allowTaint: true,
+        removeContainer: true,
       });
       
       // Remove class after capture

@@ -5,38 +5,70 @@
 /* PDF Mode - solid colors for html2canvas */
 .pdf-mode {
   background-color: #ffffff !important;
+  -webkit-print-color-adjust: exact !important;
+  print-color-adjust: exact !important;
 }
 
+.pdf-mode,
 .pdf-mode * {
-  color: #1a1a1a !important;
+  opacity: 1 !important;
+  -webkit-filter: none !important;
+  filter: none !important;
+  box-shadow: none !important;
+}
+
+.pdf-mode .text-foreground,
+.pdf-mode h1,
+.pdf-mode h2,
+.pdf-mode p,
+.pdf-mode span {
+  color: #1a202c !important;
 }
 
 .pdf-mode .text-muted-foreground {
-  color: #6b7280 !important;
+  color: #4a5568 !important;
 }
 
 .pdf-mode .text-primary {
-  color: #1e40af !important;
+  color: #2563eb !important;
 }
 
 .pdf-mode .text-success {
-  color: #059669 !important;
+  color: #16a34a !important;
 }
 
-.pdf-mode .bg-secondary {
-  background-color: #f3f4f6 !important;
+.pdf-mode .bg-secondary,
+.pdf-mode .bg-secondary\/50,
+.pdf-mode .bg-secondary\/30 {
+  background-color: #f1f5f9 !important;
 }
 
 .pdf-mode .bg-primary {
-  background-color: #1e40af !important;
+  background-color: #2563eb !important;
 }
 
 .pdf-mode .text-primary-foreground {
   color: #ffffff !important;
 }
 
-.pdf-mode .border-border {
-  border-color: #e5e7eb !important;
+.pdf-mode .border,
+.pdf-mode .border-border,
+.pdf-mode .border-dashed {
+  border-color: #cbd5e1 !important;
+}
+
+.pdf-mode .document-section {
+  background-color: #ffffff !important;
+  border: 1px solid #cbd5e1 !important;
+}
+
+.pdf-mode .document-header {
+  border-bottom: 4px solid #2563eb !important;
+}
+
+.pdf-mode .rounded-lg,
+.pdf-mode .rounded-xl {
+  border-radius: 0.5rem !important;
 }
 
 .print-document {
